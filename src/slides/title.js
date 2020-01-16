@@ -3,6 +3,6 @@ import { Slide, Heading } from "spectacle";
 
 export const titleSlide = (
   <Slide>
-    <Heading>CRA Template Apptension</Heading>
+    <Heading>react-scripts-apptension</Heading>
   </Slide>
 );

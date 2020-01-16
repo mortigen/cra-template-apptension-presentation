@@ -25,6 +25,8 @@ import {
 import { titleSlide } from './slides/title'
 import { craTemplateSlide } from './slides/craTemplate';
 import { optionalChainingSlide } from './slides/optionalChaining';
+import { typescriptSection } from './slides/typescript';
+import { titleRefinedSlide } from './slides/titleRefined';
 
 // SPECTACLE_CLI_THEME_START
 const theme = {};
@@ -106,9 +108,13 @@ const Presentation = () => (
   <Deck autoLayout={autoLayout} loop theme={theme} template={template}>
     {titleSlide}
 
+    {titleRefinedSlide}
+
     {craTemplateSlide}
 
     {optionalChainingSlide}
+
+    {typescriptSection}
 
     <Slide>
       <Heading>Formidable</Heading>
