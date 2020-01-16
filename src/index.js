@@ -19,8 +19,12 @@ import {
   Notes,
   FullScreen,
   Progress,
-  Markdown
+  Markdown,
 } from 'spectacle';
+
+import { titleSlide } from './slides/title'
+import { craTemplateSlide } from './slides/craTemplate';
+import { optionalChainingSlide } from './slides/optionalChaining';
 
 // SPECTACLE_CLI_THEME_START
 const theme = {};
@@ -100,8 +104,14 @@ int main()
 // eslint-disable-next-line react/no-multi-comp
 const Presentation = () => (
   <Deck autoLayout={autoLayout} loop theme={theme} template={template}>
+    {titleSlide}
+
+    {craTemplateSlide}
+
+    {optionalChainingSlide}
+
     <Slide>
-      <Heading>Spectacle</Heading>
+      <Heading>Formidable</Heading>
       <Text>Hello There 🤗</Text>
       <Quote>This is a Formidaquote!</Quote>
       <OrderedList>
