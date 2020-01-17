@@ -13,8 +13,12 @@ import { titleSlide } from './slides/title'
 import { craTemplateSlide } from './slides/craTemplate';
 import { optionalChainingSlide } from './slides/optionalChaining';
 import { typescriptSection } from './slides/typescript';
-import { titleRefinedSlide } from './slides/titleRefined';
 import { links } from './slides/links';
+import { immer } from './slides/immer';
+import { reduxTools } from './slides/reduxTools';
+import { responsiveTheme } from './slides/responsiveTheme';
+import { reactTestingLibrary } from './slides/reactTestingLibrary';
+import { lazyLoading } from './slides/lazyLoading';
 
 const theme = {};
 
@@ -40,11 +44,19 @@ const Presentation = () => (
   <Deck autoLayout={false} loop theme={theme} template={template}>
     {titleSlide}
 
-    {titleRefinedSlide}
-
     {craTemplateSlide}
 
     {optionalChainingSlide}
+
+    {immer}
+
+    {reduxTools}
+
+    {responsiveTheme}
+
+    {reactTestingLibrary}
+
+    {lazyLoading}
 
     {typescriptSection}
 
