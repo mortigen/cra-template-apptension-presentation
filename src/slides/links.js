@@ -29,6 +29,12 @@ export const links = (
           https://pawelgrzybek.com/typescript-interface-vs-type/
         </Link>
       </ListItem>
+
+      <ListItem>
+        <Link href="https://testing-library.com/docs/react-testing-library/intro/">
+          https://testing-library.com/docs/react-testing-library/intro
+        </Link>
+      </ListItem>
     </UnorderedList>
   </Slide>
 );

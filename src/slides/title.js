@@ -9,8 +9,8 @@ export const titleSlide = [
   ),
   (
     <Slide>
-      <Heading style={{ textDecoration: 'line-through' }}>react-scripts-apptension</Heading>
       <Heading>cra-template-apptension</Heading>
+      <Heading fontSize="h2" style={{ textDecoration: 'line-through' }}>react-scripts-apptension</Heading>
     </Slide>
   ),
   (
