@@ -6,6 +6,7 @@ import styled1 from '../../images/styled_1.png';
 import styled2 from '../../images/styled_2.png';
 import props1 from '../../images/props1.png';
 import props2 from '../../images/props2.png';
+import jsx from '../../images/jsx.png';
 
 export const react = [
   (
@@ -152,6 +153,15 @@ const HANDLERS = {
       <Heading fontSize="h2">Using native props</Heading>
 
       <Image width={'100%'} src={props2}/>
+    </Slide>
+  ),
+
+  (
+    <Slide>
+      <Heading>Props</Heading>
+      <Heading fontSize="h2">Validated inside JSX</Heading>
+
+      <Image width={'100%'} src={jsx}/>
     </Slide>
   ),
 ];
