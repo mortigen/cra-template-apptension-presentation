@@ -1,8 +1,8 @@
 import React from 'react';
 import { Slide, Heading } from 'spectacle';
 
-export const generics = (
+export const records = (
   <Slide>
-    <Heading>Generics</Heading>
+    <Heading>Records</Heading>
   </Slide>
 );
