@@ -13,8 +13,20 @@ export const links = (
       </ListItem>
 
       <ListItem>
+        <Link href="https://www.typescriptlang.org/docs/handbook/basic-types.html">
+          https://www.typescriptlang.org/docs/handbook/basic-types.html
+        </Link>
+      </ListItem>
+
+      <ListItem>
         <Link href="https://www.typescriptlang.org/docs/handbook/advanced-types.html">
           https://www.typescriptlang.org/docs/handbook/advanced-types.html
+        </Link>
+      </ListItem>
+
+      <ListItem>
+        <Link href="https://pawelgrzybek.com/typescript-interface-vs-type/">
+          https://pawelgrzybek.com/typescript-interface-vs-type/
         </Link>
       </ListItem>
     </UnorderedList>
