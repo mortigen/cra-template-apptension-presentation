@@ -3,6 +3,9 @@ import React from 'react';
 
 import hook from '../../images/hook.png';
 import styled1 from '../../images/styled_1.png';
+import styled2 from '../../images/styled_2.png';
+import props1 from '../../images/props1.png';
+import props2 from '../../images/props2.png';
 
 export const react = [
   (
@@ -118,6 +121,37 @@ const HANDLERS = {
 
       <Image src={styled1}/>
 
+    </Slide>
+  ),
+
+  (
+    <Slide>
+      <Heading>StyledComponents & Theme</Heading>
+
+      <Text>Styled components also support native props types</Text>
+
+      <Image src={styled2}/>
+
+    </Slide>
+  ),
+
+  (
+    <Slide>
+      <Heading>Props</Heading>
+
+      <Text>No propTypes!</Text>
+      <Text>Typescript typings instead</Text>
+      <Image width={'100%'} src={props1}/>
+
+    </Slide>
+  ),
+
+  (
+    <Slide>
+      <Heading>Props</Heading>
+      <Heading fontSize="h2">Using native props</Heading>
+
+      <Image width={'100%'} src={props2}/>
     </Slide>
   ),
 ];
