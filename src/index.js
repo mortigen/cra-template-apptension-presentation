@@ -14,6 +14,7 @@ import { craTemplateSlide } from './slides/craTemplate';
 import { optionalChainingSlide } from './slides/optionalChaining';
 import { typescriptSection } from './slides/typescript';
 import { titleRefinedSlide } from './slides/titleRefined';
+import { links } from './slides/links';
 
 const theme = {};
 
@@ -46,6 +47,8 @@ const Presentation = () => (
     {optionalChainingSlide}
 
     {typescriptSection}
+
+    {links}
   </Deck>
 );
 
