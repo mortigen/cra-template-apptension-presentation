@@ -5,6 +5,7 @@ import { enums } from './enums';
 import { generics } from './generics';
 import { records } from './records';
 import { partials } from './partials';
+import { react } from './react';
 
 export const typescriptSection = [
   intro,
@@ -12,5 +13,6 @@ export const typescriptSection = [
   enums,
   generics,
   partials,
-  records
+  records,
+  react
 ];
