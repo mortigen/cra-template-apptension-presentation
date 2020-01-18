@@ -6,6 +6,7 @@ import { generics } from './generics';
 import { records } from './records';
 import { partials } from './partials';
 import { react } from './react';
+import { inference } from './inference';
 
 export const typescriptSection = [
   intro,
@@ -14,5 +15,6 @@ export const typescriptSection = [
   generics,
   partials,
   records,
+  inference,
   react
 ];
