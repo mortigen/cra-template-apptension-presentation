@@ -1,4 +1,4 @@
-import { CodePane, Heading, ListItem, Slide, Text, UnorderedList } from 'spectacle';
+import { CodePane, Heading, ListItem, Notes, Slide, Text, UnorderedList } from 'spectacle';
 import React from 'react';
 
 export const reactTestingLibrary = [
@@ -18,7 +18,16 @@ export const reactTestingLibrary = [
         <ListItem>Disallows testing implementation details and forces to test actual component behavior</ListItem>
         <ListItem>No wrappers - actually renders component as it would normally render in DOM</ListItem>
         <ListItem>Not depending on React implementation (no changes needed to support hooks etc)</ListItem>
+        <ListItem>Encourages integration testing more than unit testing</ListItem>
       </UnorderedList>
+
+      <Notes>
+        Not relying on implementation makes it really easy to use i.e. when refactoring code - even when the code was changed quite much,
+        we dont need to change tests, as they only rely on what browser renders instead of how it works internally.
+
+        Changing from class components -> FC - no problem
+        container with props -> hooks - no problem
+      </Notes>
     </Slide>
   ),
 
@@ -51,11 +60,8 @@ test('shows the children when the checkbox is checked', () => {
   // get* functions will return the element or throw an error if it cannot be found
   expect(screen.queryByText(testMessage)).toBeNull()
   
-  // the queries can accept a regex to make your selectors more resilient to content tweaks and changes.
-  fireEvent.click(screen.getByLabelText(/show/i))
+  fireEvent.click(screen.getByLabelText("Show message"))
   
-  // .toBeInTheDocument() is an assertion that comes from jest-dom
-  // otherwise you could use .toBeDefined()
   expect(screen.getByText(testMessage)).toBeInTheDocument()
 })`}
       </CodePane>

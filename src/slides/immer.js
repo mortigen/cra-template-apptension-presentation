@@ -34,9 +34,9 @@ const newState = produce(state, draft => {
     <Slide>
       <Heading>Immer + Redux</Heading>
 
-      <Text>Create reducers using createImmutableReducer helper... (plop does that by default)</Text>
+      <Text>Create reducers using createReducer helper... (plop does that by default)</Text>
       <CodePane>
-        {`export const reducer = createImmutableReducer(INITIAL_STATE, HANDLERS);`}
+        {`export const reducer = createReducer(INITIAL_STATE, HANDLERS);`}
       </CodePane>
 
       <Appear elementNum={0}>
