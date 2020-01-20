@@ -1,4 +1,4 @@
-import { CodePane, Heading, ListItem, Slide, Text, UnorderedList } from 'spectacle';
+import { CodePane, Heading, ListItem, Slide, UnorderedList } from 'spectacle';
 import React from 'react';
 
 export const reactTestingLibrary = [

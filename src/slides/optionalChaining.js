@@ -9,19 +9,21 @@ const chainingThen = `const street = user && user.address && user.address.street
 
 const street = R.path(['address', 'street'], user)`;
 
-const nullishThen = `
-const fallbackToMinusOne = a => a || -1;
+const nullishThen = `const fallbackToMinusOne = a => a || -1;
 fallbackToMinusOne(null); // -1
 fallbackToMinusOne(0); // -1
-fallbackToMinusOne(1); // 1
-`;
+fallbackToMinusOne(1); // 1`;
 
-const nullishNow = `
-const fallbackToMinusOne = a => a ?? -1;
+const nullishNow = `const fallbackToMinusOne = a => a ?? -1;
 fallbackToMinusOne(null); // -1
 fallbackToMinusOne(0); // 0
-fallbackToMinusOne(1); // 1
-`;
+fallbackToMinusOne(1); // 1`;
+
+const numericSeparators = `1000000000; // Is this a billion? a hundred millions? Ten millions?
+101475938.38; // what scale is this? what power of 10?
+
+1_000_000_000; // Ah, so a billion
+101_475_938.38; // And this is hundreds of millions`
 
 export const optionalChainingSlide = [
     (
@@ -48,6 +50,13 @@ export const optionalChainingSlide = [
 
             <CodePane>{nullishNow}</CodePane>
           </Appear>
+      </Slide>
+    ),
+    (
+      <Slide>
+        <Heading>Numeric Separators</Heading>
+
+        <CodePane>{numericSeparators}</CodePane>
       </Slide>
     )
 ];

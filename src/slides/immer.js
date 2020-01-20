@@ -1,4 +1,4 @@
-import { Appear, CodePane, Heading, Image, Slide, Text } from 'spectacle';
+import { Appear, CodePane, Heading, Image, Slide, Text, Notes } from 'spectacle';
 import React from 'react';
 
 import immer1 from '../images/immer1.png';
@@ -28,25 +28,12 @@ const newState = produce(state, draft => {
         <Text>Produces new instances of changed objects but keeps references for untouched values</Text>
         <Image src={immer2} />
       </Appear>
+
+      <Notes>
+        <ol>
+          <li>modify state object properties or return new state - don't do both</li>
+        </ol>
+      </Notes>
     </Slide>
   ),
-  (
-    <Slide>
-      <Heading>Immer + Redux</Heading>
-
-      <Text>Create reducers using createImmutableReducer helper... (plop does that by default)</Text>
-      <CodePane>
-        {`export const reducer = createImmutableReducer(INITIAL_STATE, HANDLERS);`}
-      </CodePane>
-
-      <Appear elementNum={0}>
-        <Text>And using like regular reducer - all magic happens underneath</Text>
-        <CodePane>
-          {`const handleSetLanguage = (state, { payload }>) => {
-  state.language = payload;
-};`}
-        </CodePane>
-      </Appear>
-    </Slide>
-  )
 ];

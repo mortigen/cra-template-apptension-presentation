@@ -1,5 +1,7 @@
 import React from 'react';
-import { Slide, Heading, Text, CodePane, Appear } from 'spectacle';
+import { Slide, Heading, Text, CodePane, Appear, Image, FlexBox } from 'spectacle';
+
+import typeVsInterface from '../../images/typescript-type-vs-interface.jpg';
 
 export const types = [
   (
@@ -138,6 +140,16 @@ function getName(n: NameOrResolver): Name {
     }
 }`}
       </CodePane>
+    </Slide>
+  ),
+  (
+    <Slide>
+      <Heading>Types & interfaces</Heading>
+      <Heading fontSize="h2">Comparison</Heading>
+
+      <FlexBox>
+        <Image src={typeVsInterface} height={450} />
+      </FlexBox>
     </Slide>
   )
 ];
