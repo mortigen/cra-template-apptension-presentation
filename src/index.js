@@ -19,6 +19,8 @@ import { reduxTools } from './slides/reduxTools';
 import { responsiveTheme } from './slides/responsiveTheme';
 import { reactTestingLibrary } from './slides/reactTestingLibrary';
 import { lazyLoading } from './slides/lazyLoading';
+import { hooks } from './slides/hooks';
+import { providerTesting } from './slides/providerTesting';
 
 const theme = {};
 
@@ -55,6 +57,10 @@ const Presentation = () => (
     {responsiveTheme}
 
     {reactTestingLibrary}
+
+    {hooks}
+
+    {providerTesting}
 
     {lazyLoading}
 
