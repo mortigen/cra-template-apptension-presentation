@@ -23,6 +23,7 @@ import { fixtures } from './slides/fixtures';
 import { jsonServer } from './slides/jsonServer';
 import { hooks } from './slides/hooks';
 import { fixedBugs } from './slides/fixedBugs';
+import { providerTesting } from './slides/providerTesting';
 
 const theme = {};
 
@@ -60,13 +61,15 @@ const Presentation = () => (
 
     {reactTestingLibrary}
 
+    {hooks}
+
+    {providerTesting}
+
     {lazyLoading}
 
     {fixtures}
 
     {jsonServer}
-
-    {hooks}
 
     {fixedBugs}
 
