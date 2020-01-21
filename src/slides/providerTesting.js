@@ -25,6 +25,8 @@ render();`}
       </Appear>
 
       <Notes>
+        Provider will wrap tested component with all required contexts (like router context, redux store context, intl etc)
+
         First will come with default store and default route
 
         You can also mock hooks with jest.mock

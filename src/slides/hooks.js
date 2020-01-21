@@ -1,4 +1,4 @@
-import { Appear, CodePane, Heading, ListItem, Slide, Text, UnorderedList } from 'spectacle';
+import { Appear, CodePane, Heading, ListItem, Notes, Slide, Text, UnorderedList } from 'spectacle';
 import React from 'react';
 
 export const hooks = [
@@ -71,6 +71,10 @@ export const hooks = [
   return [users, fetchUsers];
 };`}
       </CodePane>
+      
+      <Notes>
+        This is how useUsers hook could look like
+      </Notes>
     </Slide>
   ),
   (

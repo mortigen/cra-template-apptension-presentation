@@ -1,4 +1,4 @@
-import { Appear, CodePane, Heading, Image, Slide, Text } from 'spectacle';
+import { Appear, CodePane, Heading, Image, Notes, Slide, Text } from 'spectacle';
 import React from 'react';
 
 import hook from '../../images/hook.png';
@@ -34,7 +34,7 @@ export const react = [
       <CodePane>
         {`export const setLanguage = createAction<string>('SET_LANGUAGE');
 
-dispatch(localesActions.setLanguage(lang));
+dispatch(localesActions.setLanguage('pl'));
 `}
       </CodePane>
     </Slide>
@@ -69,9 +69,18 @@ const handleSetLanguage = (state: LocalesState, { payload }: ReduxAction<string>
 };
 
 const HANDLERS = {
-  [localesActions.setLanguage.toString()]: handleSetLanguage,
-};`}
+  ...actionHandler(localesActions.setLanguage, handleSetLanguage)
+};
+
+export const reducer = createReducer(INITIAL_STATE, HANDLERS);`}
       </CodePane>
+
+      <Notes>
+        Everything is typed here, TS guards that:
+
+        - [thanks to createReducer typings] all reducers accept actual LocalesState format in `state` variable
+        - [thanks to actionHandler typings] handleSetLanguage accepts same payload type as setLangauge action
+      </Notes>
     </Slide>
   ),
   (
@@ -120,7 +129,7 @@ const HANDLERS = {
 
       <Text>Accessible in styled components</Text>
 
-      <Image src={styled1}/>
+      <Image width={`100%`} src={styled1}/>
 
     </Slide>
   ),
@@ -131,7 +140,7 @@ const HANDLERS = {
 
       <Text>Styled components also support native props types</Text>
 
-      <Image src={styled2}/>
+      <Image width={`100%`} src={styled2}/>
 
     </Slide>
   ),

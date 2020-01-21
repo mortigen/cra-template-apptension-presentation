@@ -53,8 +53,6 @@ const Presentation = () => (
 
     {optionalChainingSlide}
 
-    {immer}
-
     {reduxTools}
 
     {responsiveTheme}

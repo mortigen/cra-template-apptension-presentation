@@ -65,6 +65,10 @@ test('shows the children when the checkbox is checked', () => {
   expect(screen.getByText(testMessage)).toBeInTheDocument()
 })`}
       </CodePane>
+
+      <Notes>
+        Hypothetical component that shows messages after clicking on `show mesage` button
+      </Notes>
     </Slide>
   )
 ];
