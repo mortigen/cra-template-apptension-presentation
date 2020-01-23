@@ -148,6 +148,6 @@ function getName(n: NameOrResolver): Name {
   <Slide>
     <Heading>Types & interfaces</Heading>
     <Heading fontSize="h2">Comparison</Heading>
-    <Image style={{ margin: 'auto !important'}} src={typeVsInterface} height={450} />
+    <Image style={{ margin: 'auto !important'}} src={typeVsInterface} height={600} />
   </Slide>
 ];
