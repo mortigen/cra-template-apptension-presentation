@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide, Heading, Text, CodePane, FlexBox } from "spectacle";
+import { Slide, Heading, Text, CodePane } from "spectacle";
 
 const storeFixture = `import { usersMock } from './users';
 
@@ -17,7 +17,7 @@ export const store = {
   locales,
   startup,
   users,
-};`
+};`;
 
 export const fixtures = (
   <Slide>
@@ -26,8 +26,6 @@ export const fixtures = (
     <Text>Use global fixtures for mocking store</Text>
     <Text>It's used by test utils by default</Text>
 
-    <CodePane autoFillHeight>
-      {storeFixture}
-    </CodePane>
+    <CodePane lang={"javascript"} source={storeFixture} />
   </Slide>
 );

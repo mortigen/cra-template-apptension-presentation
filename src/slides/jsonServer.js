@@ -39,9 +39,7 @@ export const jsonServer = [
 
       <Text>Mock data and use in json-server and your tests</Text>
 
-      <CodePane autoFillHeight>
-        {faker}
-      </CodePane>
+      <CodePane lang={'javascript'} source={faker} />
 
       <Text>Uses old module export because of json-server</Text>
     </Slide>

@@ -1,27 +1,26 @@
-import React from 'react';
-import { Slide, Heading, CodePane, Appear, Text } from 'spectacle';
+import React from "react";
+import { Slide, Heading, CodePane, Appear, Text } from "spectacle";
 
 export const records = [
-  (
-    <Slide>
-      <Heading>Records</Heading>
+  <Slide>
+    <Heading>Records</Heading>
 
-      <CodePane>
-        {`type A = Record<string, number>;
+    <CodePane
+      lang={"javascript"}
+      source={`type A = Record<string, number>;
 
 const a: A = {
     foo: 0,
     bar: 1
 };`}
-      </CodePane>
-    </Slide>
-  ),
-  (
-    <Slide>
-      <Heading>Records</Heading>
+    />
+  </Slide>,
+  <Slide>
+    <Heading>Records</Heading>
 
-      <CodePane autoFillHeight={true}>
-        {`enum N { ONE, TWO };
+    <CodePane
+      lang={"javascript"}
+      source={`enum N { ONE, TWO };
 
 type B = Record<N, number>;
 
@@ -37,15 +36,14 @@ const b: B = {
     [N.ONE]: 0,
     [N.TWO]: 1
 }`}
-      </CodePane>
+    />
 
-      <Appear elementNum={0}>
+    <Appear>
+      <div>
         <Text>This will fail:</Text>
 
-        <CodePane>
-          {`const b: B = { [N.ONE]: 0 };`}
-        </CodePane>
-      </Appear>
-    </Slide>
-  )
-]
+        <CodePane lang={"javascript"} source={`const b: B = { [N.ONE]: 0 };`} />
+      </div>
+    </Appear>
+  </Slide>
+];

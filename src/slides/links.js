@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Link, ListItem, Slide, Text, UnorderedList } from 'spectacle';
+import { Heading, Link, ListItem, Slide, Text, List } from 'spectacle';
 
 export const links = [
   (
@@ -17,7 +17,7 @@ export const links = [
     <Slide>
       <Heading>Useful links</Heading>
 
-      <UnorderedList>
+      <List>
         <ListItem>
           <Link href="https://github.com/typescript-cheatsheets/react-typescript-cheatsheet">
             https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
@@ -47,7 +47,7 @@ export const links = [
             https://testing-library.com/docs/react-testing-library/intro
           </Link>
         </ListItem>
-      </UnorderedList>
+      </List>
     </Slide>
   )
 ];

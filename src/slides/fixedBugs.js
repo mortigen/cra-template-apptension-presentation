@@ -1,11 +1,11 @@
 import React from "react";
-import { Slide, Heading, Text, CodePane, UnorderedList, ListItem } from "spectacle";
+import { Slide, Heading, List, ListItem } from "spectacle";
 
 export const fixedBugs = (
   <Slide>
     <Heading>Fixed bugs and other improvements</Heading>
 
-    <UnorderedList>
+    <List>
         <ListItem>Unsupported browser in google search fixed</ListItem>
         <ListItem>nock memory leak problem</ListItem>
         <ListItem>react-helmet-async instead react-helmet (because of react warnings)</ListItem>
@@ -15,7 +15,7 @@ export const fixedBugs = (
         <ListItem>storybook knobs</ListItem>
         <ListItem>hot reload supporting hooks</ListItem>
         <ListItem>Fixed deprecated babel polyfill</ListItem>
-    </UnorderedList>
+    </List>
 
   </Slide>
 );

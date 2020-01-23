@@ -1,55 +1,66 @@
-import React from 'react';
-import { Slide, Heading, CodePane, Text, Appear, Image } from 'spectacle';
+import React from "react";
+import { Slide, Heading, CodePane, Text, Appear, Image } from "spectacle";
 
-import genericsFail from '../../images/generics_fail.png';
-import genericsFail2 from '../../images/generics_fail_2.png';
+import genericsFail from "../../images/generics_fail.png";
+import genericsFail2 from "../../images/generics_fail_2.png";
 
 export const generics = [
-  (
-    <Slide>
-      <Heading>Generic types</Heading>
+  <Slide>
+    <Heading>Generic types</Heading>
 
-      <CodePane>
-        {`const duplicate = <T>(v: T): T[] => [v, v];`}
-      </CodePane>
+    <CodePane
+      lang={"javascript"}
+      source={`const duplicate = <T>(v: T): T[] => [v, v];`}
+    />
 
-      <Appear elementNum={0}>
+    <Appear order={0}>
+      <div>
         <Text>This will work:</Text>
 
-        <CodePane>
-          {`const a: string[] = duplicate('test');`}
-        </CodePane>
-      </Appear>
+        <CodePane
+          lang={"javascript"}
+          source={`const a: string[] = duplicate('test');`}
+        />
+      </div>
+    </Appear>
 
-      <Appear elementNum={1}>
+    <Appear order={1}>
+      <div>
         <Text>This won't work:</Text>
 
-        <Image src={genericsFail}/>
-      </Appear>
-    </Slide>
-  ),
-  (
-    <Slide>
-      <Heading>Generic types</Heading>
+        <Image src={genericsFail} />
+      </div>
+    </Appear>
+  </Slide>,
+  <Slide>
+    <Heading>Generic types</Heading>
 
-      <CodePane>
-        {`const createIdentityFn = <T>() => (param: T) => param;`}
-      </CodePane>
+    <CodePane
+      lang={"javascript"}
+      source={`const createIdentityFn = <T>() => (param: T) => param;`}
+    />
 
-      <Appear elementNum={0}>
+    <Appear order={0}>
+      <div>
         <Text>This will work:</Text>
 
-        <CodePane>
-          {`const fn1: (param: string) => string = createIdentityFn<string>();`}
-        </CodePane>
-      </Appear>
+        <CodePane
+          lang={"javascript"}
+          source={`const fn1: (param: string) => string = createIdentityFn<string>();`}
+        />
+      </div>
+    </Appear>
 
-      <Appear elementNum={1}>
+    <Appear order={1}>
+      <div>
         <Text>This won't work:</Text>
 
-        <CodePane>{`const fn2: (param: number) => number = createIdentityFn<string>();`}</CodePane>
-        <Image src={genericsFail2}/>
-      </Appear>
-    </Slide>
-  )
-]
+        <CodePane
+          lang={"javascript"}
+          source={`const fn2: (param: number) => number = createIdentityFn<string>();`}
+        />
+        <Image src={genericsFail2} />
+      </div>
+    </Appear>
+  </Slide>
+];

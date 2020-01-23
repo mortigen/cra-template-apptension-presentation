@@ -1,21 +1,24 @@
-import React from 'react';
-import { Slide, Heading, CodePane, Appear, Text } from 'spectacle';
+import React from "react";
+import { Slide, Heading, CodePane, Appear, Text } from "spectacle";
 
 export const partials = (
   <Slide>
     <Heading>Partials</Heading>
 
-    <CodePane>
-      {`type Example = {
+    <CodePane
+      lang={"javascript"}
+      source={`type Example = {
   a: string;
   b: number;
 }`}
-    </CodePane>
+    />
 
-    <Appear elementNum={0}>
-      <Text>Transformed with Partial</Text>
-      <CodePane>
-        {`type PartialExample = Partial<Example>;
+    <Appear>
+      <div>
+        <Text>Transformed with Partial</Text>
+        <CodePane
+          lang={"javascript"}
+          source={`type PartialExample = Partial<Example>;
 
 // equals
 
@@ -23,7 +26,8 @@ type PartialExample = {
   a?: string;
   b?: number;
 }`}
-      </CodePane>
+        />
+      </div>
     </Appear>
   </Slide>
 );

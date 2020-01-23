@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide, Heading, Text, CodePane, Appear } from "spectacle";
+import { Slide, Heading, Text, CodePane, Appear, Anim } from "spectacle";
 
 const chainingNow = `const street = user?.address?.street`;
 
@@ -23,40 +23,38 @@ const numericSeparators = `1000000000; // Is this a billion? a hundred millions?
 101475938.38; // what scale is this? what power of 10?
 
 1_000_000_000; // Ah, so a billion
-101_475_938.38; // And this is hundreds of millions`
+101_475_938.38; // And this is hundreds of millions`;
 
 export const optionalChainingSlide = [
-    (
-      <Slide>
-          <Heading>Optional chaining</Heading>
+  <Slide>
+    <Heading>Optional chaining</Heading>
 
-          <CodePane>{chainingThen}</CodePane>
+    <CodePane lang={"javascript"} source={chainingThen} />
 
-          <Appear elementNum={0}>
-            <Text>Becomes this:</Text>
+    <Appear>
+      <div>
+        <Text>Becomes this:</Text>
 
-            <CodePane>{chainingNow}</CodePane>
-          </Appear>
-      </Slide>
-    ),
-    (
-      <Slide>
-          <Heading>Nullish Coalescing</Heading>
+        <CodePane lang={"javascript"} source={chainingNow} />
+      </div>
+    </Appear>
+  </Slide>,
+  <Slide>
+    <Heading>Nullish Coalescing</Heading>
 
-          <CodePane>{nullishThen}</CodePane>
+    <CodePane lang={"javascript"} source={nullishThen} />
 
-          <Appear elementNum={0}>
-            <Text>Becomes this:</Text>
+    <Appear>
+      <div>
+        <Text>Becomes this:</Text>
 
-            <CodePane>{nullishNow}</CodePane>
-          </Appear>
-      </Slide>
-    ),
-    (
-      <Slide>
-        <Heading>Numeric Separators</Heading>
+        <CodePane lang={"javascript"} source={nullishNow} />
+      </div>
+    </Appear>
+  </Slide>,
+  <Slide>
+    <Heading>Numeric Separators</Heading>
 
-        <CodePane>{numericSeparators}</CodePane>
-      </Slide>
-    )
+    <CodePane lang={"javascript"} source={numericSeparators} />
+  </Slide>
 ];
