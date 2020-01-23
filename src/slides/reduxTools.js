@@ -1,5 +1,6 @@
 import { Appear, CodePane, Heading, Slide, Text } from "spectacle";
 import React from "react";
+import { immer } from "./immer";
 
 export const reduxTools = [
   <Slide>
@@ -30,6 +31,7 @@ takeLatest(setLanguage, handleSetLanguage)]
       </div>
     </Appear>
   </Slide>,
+  ...immer,
   <Slide>
     <Heading>Redux Toolkit + Immer</Heading>
 

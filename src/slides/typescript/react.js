@@ -1,4 +1,12 @@
-import { Appear, CodePane, Heading, Image, Slide, Text } from "spectacle";
+import {
+  Appear,
+  CodePane,
+  Heading,
+  Image,
+  Notes,
+  Slide,
+  Text
+} from "spectacle";
 import React from "react";
 
 import hook from "../../images/hook.png";
@@ -34,7 +42,7 @@ export const react = [
       lang={"javascript"}
       source={`export const setLanguage = createAction<string>('SET_LANGUAGE');
 
-dispatch(localesActions.setLanguage(lang));
+dispatch(localesActions.setLanguage('pl'));
 `}
     />
   </Slide>,
@@ -67,9 +75,48 @@ const handleSetLanguage = (state: LocalesState, { payload }: ReduxAction<string>
 };
 
 const HANDLERS = {
-  [localesActions.setLanguage.toString()]: handleSetLanguage,
-};`}
+  ...actionHandler(localesActions.setLanguage, handleSetLanguage)
+};
+
+export const reducer = createReducer(INITIAL_STATE, HANDLERS);`}
     />
+
+    <Notes>
+      Everything is typed here, TS guards that: - [thanks to createReducer
+      typings] all reducers accept actual LocalesState format in `state`
+      variable - [thanks to actionHandler typings] handleSetLanguage accepts
+      same payload type as setLangauge action
+    </Notes>
+  </Slide>,
+  <Slide>
+    <Heading>Sagas</Heading>
+
+    <Text>
+      TS will check if your handlers accepts same payload as is dispatched in
+      your action
+    </Text>
+    <CodePane
+      lang={"javascript"}
+      source={`...takeLatest(localesActions.setLanguage, fetchUsers);...
+       
+function* setLanguage({ payload }: ReduxAction<string>) {...
+        `}
+    />
+
+    <Appear>
+      <div>
+        <Text>And will fail for:</Text>
+        <CodePane
+          lang={"javascript"}
+          source={`...takeLatest(localesActions.setLanguage, fetchUsers);...
+       
+function* setLanguage({ payload }: ReduxAction<number>) {...
+        `}
+        />
+      </div>
+    </Appear>
+
+    <Notes>TS ensures</Notes>
   </Slide>,
   <Slide>
     <Heading>Global state type</Heading>
@@ -115,14 +162,15 @@ const HANDLERS = {
 
     <Text>Accessible in styled components</Text>
 
-    <Image src={styled1} />
+    <Image width={`100%`} src={styled1} />
   </Slide>,
+
   <Slide>
     <Heading>StyledComponents & Theme</Heading>
 
     <Text>Styled components also support native props types</Text>
 
-    <Image src={styled2} />
+    <Image width={`100%`} src={styled2} />
   </Slide>,
   <Slide>
     <Heading>Props</Heading>

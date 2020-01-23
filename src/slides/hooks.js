@@ -1,4 +1,4 @@
-import { CodePane, Heading, ListItem, Slide, Text, List } from "spectacle";
+import { CodePane, Heading, ListItem, Slide, Text, List, Notes } from "spectacle";
 import React from "react";
 
 export const hooks = [
@@ -72,7 +72,10 @@ export const hooks = [
   return [users, fetchUsers];
 };`}
     />
+
+    <Notes>This is how useUsers hook could look like</Notes>
   </Slide>,
+
   <Slide>
     <Heading>Hooks</Heading>
 

@@ -5,7 +5,7 @@ import {
   Notes,
   Slide,
   Text,
-  List,
+  List
 } from "spectacle";
 import React from "react";
 
@@ -83,5 +83,10 @@ test('shows the children when the checkbox is checked', () => {
   expect(screen.getByText(testMessage)).toBeInTheDocument()
 })`}
     />
+
+    <Notes>
+      Hypothetical component that shows messages after clicking on `show mesage`
+      button
+    </Notes>
   </Slide>
 ];
