@@ -4,7 +4,7 @@
   "description": "Spectacle presentation",
   "scripts": {
     "start": "parcel ./src/index.html -p 3000",
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
