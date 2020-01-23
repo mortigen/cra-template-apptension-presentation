@@ -35501,7 +35501,7 @@ const Presentation = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createEl
   loop: true,
   theme: theme,
   template: template
-}, _slides_title__WEBPACK_IMPORTED_MODULE_3__["titleSlide"], _slides_craTemplate__WEBPACK_IMPORTED_MODULE_4__["craTemplateSlide"], _slides_optionalChaining__WEBPACK_IMPORTED_MODULE_5__["optionalChainingSlide"], _slides_immer__WEBPACK_IMPORTED_MODULE_8__["immer"], _slides_reduxTools__WEBPACK_IMPORTED_MODULE_9__["reduxTools"], _slides_responsiveTheme__WEBPACK_IMPORTED_MODULE_10__["responsiveTheme"], _slides_reactTestingLibrary__WEBPACK_IMPORTED_MODULE_11__["reactTestingLibrary"], _slides_hooks__WEBPACK_IMPORTED_MODULE_15__["hooks"], _slides_providerTesting__WEBPACK_IMPORTED_MODULE_17__["providerTesting"], _slides_lazyLoading__WEBPACK_IMPORTED_MODULE_12__["lazyLoading"], _slides_fixtures__WEBPACK_IMPORTED_MODULE_13__["fixtures"], _slides_jsonServer__WEBPACK_IMPORTED_MODULE_14__["jsonServer"], _slides_fixedBugs__WEBPACK_IMPORTED_MODULE_16__["fixedBugs"], _slides_typescript__WEBPACK_IMPORTED_MODULE_6__["typescriptSection"], _slides_links__WEBPACK_IMPORTED_MODULE_7__["links"]);
+}, _slides_title__WEBPACK_IMPORTED_MODULE_3__["titleSlide"], _slides_craTemplate__WEBPACK_IMPORTED_MODULE_4__["craTemplateSlide"], _slides_optionalChaining__WEBPACK_IMPORTED_MODULE_5__["optionalChainingSlide"], _slides_reduxTools__WEBPACK_IMPORTED_MODULE_9__["reduxTools"], _slides_responsiveTheme__WEBPACK_IMPORTED_MODULE_10__["responsiveTheme"], _slides_reactTestingLibrary__WEBPACK_IMPORTED_MODULE_11__["reactTestingLibrary"], _slides_hooks__WEBPACK_IMPORTED_MODULE_15__["hooks"], _slides_providerTesting__WEBPACK_IMPORTED_MODULE_17__["providerTesting"], _slides_lazyLoading__WEBPACK_IMPORTED_MODULE_12__["lazyLoading"], _slides_fixtures__WEBPACK_IMPORTED_MODULE_13__["fixtures"], _slides_jsonServer__WEBPACK_IMPORTED_MODULE_14__["jsonServer"], _slides_fixedBugs__WEBPACK_IMPORTED_MODULE_16__["fixedBugs"], _slides_typescript__WEBPACK_IMPORTED_MODULE_6__["typescriptSection"], _slides_links__WEBPACK_IMPORTED_MODULE_7__["links"]);
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Presentation, null), document.getElementById('root'));
 
@@ -35634,7 +35634,7 @@ const hooks = [react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(specta
   const fetchUsers = () => dispatch(usersActions.fetchUsers());
 
   return [users, fetchUsers];
-};`)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Hooks"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "You can change behavior of the hook with no changes in the parent component"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], {
+};`), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Notes"], null, "This is how useUsers hook could look like")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Hooks"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "You can change behavior of the hook with no changes in the parent component"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], {
   autoFillHeight: true
 }, `export const UsersComponent = () => {
   const [users] = useUsers(); // but now i.e. users return different count based on window width
@@ -35837,7 +35837,7 @@ const providerTesting = [react__WEBPACK_IMPORTED_MODULE_1___default.a.createElem
 }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `const render = makeContextRenderer(() => <Users />);
 render();`)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Appear"], {
   elementNum: 1
-}, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Or with custom props or context data"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `render({ prop1: 'value' }, { store: {...} });`)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Notes"], null, "First will come with default store and default route You can also mock hooks with jest.mock"))];
+}, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Or with custom props or context data"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `render({ prop1: 'value' }, { store: {...} });`)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Notes"], null, "Provider will wrap tested component with all required contexts (like router context, redux store context, intl etc) First will come with default store and default route You can also mock hooks with jest.mock"))];
 
 /***/ }),
 
@@ -35880,7 +35880,7 @@ test('shows the children when the checkbox is checked', () => {
   fireEvent.click(screen.getByLabelText("Show message"))
   
   expect(screen.getByText(testMessage)).toBeInTheDocument()
-})`))];
+})`), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Notes"], null, "Hypothetical component that shows messages after clicking on `show mesage` button"))];
 
 /***/ }),
 
@@ -35897,6 +35897,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var spectacle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! spectacle */ "./node_modules/spectacle/es/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./immer */ "./src/slides/immer.js");
+
 
 
 const reduxTools = [react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Redux Toolkit"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], {
@@ -35913,7 +35915,7 @@ setLanguage.toString() === 'LOCALES/SET_LANGUAGE';
 
 //in sagas
 takeLatest(setLanguage, handleSetLanguage)]
-          `))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Redux Toolkit + Immer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Redux toolkit uses Immer internally for reducers"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `import { createReducer } from 'redux-toolkit';
+          `))), ..._immer__WEBPACK_IMPORTED_MODULE_2__["immer"], react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Redux Toolkit + Immer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Redux toolkit uses Immer internally for reducers"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `import { createReducer } from 'redux-toolkit';
 
 export const reducer = createReducer(INITIAL_STATE, HANDLERS);`), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Appear"], {
   elementNum: 0
@@ -36043,13 +36045,13 @@ const generics = [react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spe
   elementNum: 1
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Text"], null, "This won't work:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Image"], {
   src: _images_generics_fail_png__WEBPACK_IMPORTED_MODULE_2__["default"]
-}))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Heading"], null, "Generic types"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["CodePane"], null, `const createIdentityFn = <T>() => (param: T) => param;`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Appear"], {
+})), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Notes"], null, "- we dont know exactly what type of input we get - but we know what output we get as soon as we know the input type - TS knows the result type as soon as we use pass parameter to the function")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Heading"], null, "Generic types"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["CodePane"], null, `const createIdentityFn = <T>() => (param: T) => param;`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Appear"], {
   elementNum: 0
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Text"], null, "This will work:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["CodePane"], null, `const fn1: (param: string) => string = createIdentityFn<string>();`)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Appear"], {
   elementNum: 1
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Text"], null, "This won't work:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["CodePane"], null, `const fn2: (param: number) => number = createIdentityFn<string>();`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Image"], {
   src: _images_generics_fail_2_png__WEBPACK_IMPORTED_MODULE_3__["default"]
-})))];
+})), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_1__["Notes"], null, "We can also explicitly pass the generic type"))];
 
 /***/ }),
 
@@ -36198,7 +36200,7 @@ const react = [react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(specta
   autoFillHeight: true
 }, `const data = useMyHook<ReturnedType>();`))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Redux actions"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `export const setLanguage = createAction<string>('SET_LANGUAGE');
 
-dispatch(localesActions.setLanguage(lang));
+dispatch(localesActions.setLanguage('pl'));
 `)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Selectors"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `export const selectLocalesLanguage = createSelector<GlobalState, LocalesState, string>(
   selectLocalesDomain,
   locales => locales.language
@@ -36217,8 +36219,10 @@ const handleSetLanguage = (state: LocalesState, { payload }: ReduxAction<string>
 };
 
 const HANDLERS = {
-  [localesActions.setLanguage.toString()]: handleSetLanguage,
-};`)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Global state type"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "(Autogenerated by plop)"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `export type GlobalState = {
+  ...actionHandler(localesActions.setLanguage, handleSetLanguage)
+};
+
+export const reducer = createReducer(INITIAL_STATE, HANDLERS);`), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Notes"], null, "Everything is typed here, TS guards that: - [thanks to createReducer typings] all reducers accept actual LocalesState format in `state` variable - [thanks to actionHandler typings] handleSetLanguage accepts same payload type as setLangauge action")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Global state type"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "(Autogenerated by plop)"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["CodePane"], null, `export type GlobalState = {
   locales: LocalesState;
   startup: StartupState;
   users: UsersState;
@@ -36238,8 +36242,10 @@ const HANDLERS = {
     colors?: ThemeMap<Color, string>;
     ...
   }`), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Accessible in styled components"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Image"], {
+  width: `100%`,
   src: _images_styled_1_png__WEBPACK_IMPORTED_MODULE_3__["default"]
 })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "StyledComponents & Theme"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Styled components also support native props types"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Image"], {
+  width: `100%`,
   src: _images_styled_2_png__WEBPACK_IMPORTED_MODULE_4__["default"]
 })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Slide"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Heading"], null, "Props"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "No propTypes!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Text"], null, "Typescript typings instead"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(spectacle__WEBPACK_IMPORTED_MODULE_0__["Image"], {
   width: '100%',
