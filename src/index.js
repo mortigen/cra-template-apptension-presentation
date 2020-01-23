@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from 'react-dom';
-import { Deck, Slide, Heading } from "spectacle";
+import { Deck } from "spectacle";
 
 import createTheme from "spectacle/lib/themes/default";
 
@@ -9,7 +9,6 @@ import { craTemplateSlide } from "./slides/craTemplate";
 import { optionalChainingSlide } from "./slides/optionalChaining";
 import { typescriptSection } from "./slides/typescript";
 import { links } from "./slides/links";
-import { immer } from "./slides/immer";
 import { reduxTools } from "./slides/reduxTools";
 import { responsiveTheme } from "./slides/responsiveTheme";
 import { reactTestingLibrary } from "./slides/reactTestingLibrary";
@@ -22,10 +21,10 @@ import { providerTesting } from "./slides/providerTesting";
 
 const theme = createTheme(
   {
-    primary: "#686868",
-    secondary: "#eeeeee",
-    tertiary: "#03A9FC",
-    quaternary: "#CECECE"
+    primary: "#88B7B5",
+    secondary: "#2F4858",
+    tertiary: "#3B5249",
+    quaternary: "#BEC5AD"
   },
   {
     primary: "Montserrat",
